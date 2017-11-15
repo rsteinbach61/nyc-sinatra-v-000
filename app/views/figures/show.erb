@@ -1,0 +1,12 @@
+show figures
+
+<%@figure = Figure.find(params['id'])%>
+<h3><a href="/figures/<%=@figure.id%>/edit"><%=@figure.name%></a></h3>
+
+<%@figure.titles.each do |ft|%>
+<p><%=ft.name%></p>
+<%end%>
+
+<%@figure.landmarks.each do |fl|%>
+<p><%=fl.name%></p>
+<%end%>
